@@ -7,5 +7,6 @@ int     main(void)
         rush(1,1);
         rush(1,5);
         rush(4,4);
+        rush(2,2);
         return (0);
 }
