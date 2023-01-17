@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsuphasa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/17 17:11:27 by nsuphasa          #+#    #+#             */
-/*   Updated: 2023/01/17 17:16:50 by nsuphasa         ###   ########.fr       */
+/*   Created: 2023/01/17 22:50:06 by nsuphasa          #+#    #+#             */
+/*   Updated: 2023/01/17 22:51:10 by nsuphasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-void	ft_swap(int *a, int *b)
+
+void	ft_rev_int_tab(int *tab, int size)
 {
 	int	tmp;
-
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
+	int	i;
+	
+	i = 0;
+	while(i < size)
+	{
+		tmp = tab[i];
+		tab[i] = tab[size - 1];
+		tab[size - 1] = tmp;
+		i++;
+		size--;
+	}
 }

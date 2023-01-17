@@ -3,12 +3,12 @@
 
 int main() {
 
-    printf("\n----------ex04----------\nExpected:\n4 2");
+    printf("\n----------ex02----------\nExpected:\n44 22");
     printf("\nOutput:\n");
-    int a4 = 14;
-    int b4 = 3;
-    ft_ultimate_div_mod(&a4, &b4);
-    printf("%d %d", a4, b4);
+    int a2 = 22;
+    int b2 = 44;
+    ft_swap(&a2, &b2);
+    printf("%d %d", a2, b2);
     printf("\n\n");
 
         return (0);
