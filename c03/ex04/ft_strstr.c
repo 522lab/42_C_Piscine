@@ -1,16 +1,34 @@
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nsuphasa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/21 19:03:20 by nsuphasa          #+#    #+#             */
+/*   Updated: 2023/01/21 19:22:01 by nsuphasa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+char	*ft_strstr(char *str, char *to_find)
 {
-	unsigned int	i;
-	unsigned int	j;
+	int	i;
+	int	j;
 
+	if (!to_find)
+		return (str);
 	i = -1;
-	while (dest[++i])
-	j = -1;
-	while (++j < nb)
+	while (str[++i])
 	{
-		dest[i] = src[j];
-		i++;
+		j = 0;
+		while (to_find[j])
+		{
+			if (str[i + j] == to_find[j])
+				j++;
+			else
+				break ;
+		}
+		if (!to_find[j])
+			return (&str[i]);
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (0);
 }

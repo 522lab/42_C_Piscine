@@ -20,11 +20,12 @@
 /* ************************************************************************** */
 #include <stdio.h>
 #include <string.h>
-// #include "ex00/ft_strcmp.c"
-// #include "ex01/ft_strncmp.c"
-// #include "ex02/ft_strcat.c"
-// #include "ex03/ft_strncat.c"
-// #include "ex04/ft_strstr.c"
+#include "ex00/ft_strcmp.c"
+#include "ex01/ft_strncmp.c"
+#include "ex02/ft_strcat.c"
+#include "ex03/ft_strncat.c"
+#include "ex04/ft_strstr.c"
+#include "ex05/ft_strlcat.c"
 
 int	ft_strcmp(char *s1, char *s2)
 {
@@ -114,6 +115,37 @@ char    *ft_strstr(char *str, char *to_find)
 	return (0);
 }
 
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+{
+	unsigned int	i;
+	unsigned int	j;
+
+	i = 0;
+	while (dest[i] != '\0')
+	{
+		i++;
+	}
+	j = 0;
+	while (src[j])
+	{
+		if (i == size - 1)
+		{
+			while(dest[i] != '\0')
+			{
+				dest[i] = '\0';
+				i++;
+				j++;
+			}
+			return (i);
+		}
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+	dest[i] = '\0';
+	return (i);
+}
+
 int	main(void)
 {
 	printf("ex00/ft_strcmp\n");
@@ -128,7 +160,7 @@ int	main(void)
 	char ex2dest1[] = "abc";
 	char ex2dest2[] = "abc";
 	char ex2src[] = "def";
-	printf("Expected:\t%s\n", strcat(ex2dest1, ex2src));
+	printf("Expected:\t%s\n", strcat(ex2dest1, ex2src)); // NOT WORK ON Mac!!
 	printf("Result:\t\t%s\n", ft_strcat(ex2dest2, ex2src));
 
 	printf("\nex03/ft_strncat\n");
@@ -136,7 +168,7 @@ int	main(void)
 	char ex3dest1[] = "abc";
 	char ex3dest2[] = "abc";
 	char ex3src[] = "def";
-	printf("Expected:\t%s\n", strncat(ex3dest1, ex3src, ex3nb));
+	printf("Expected:\t%s\n", strncat(ex3dest1, ex3src, ex3nb)); // NOT WORK ON Mac!!
 	printf("Result:\t\t%s\n", ft_strncat(ex3dest2, ex3src, ex3nb));
 
 	printf("\nex04/ft_strstr\n");
@@ -146,10 +178,10 @@ int	main(void)
 	printf("Result:\t\t%s\n", ft_strstr(ex4str, ex4to_find));
 
 	printf("\nex05/ft_strlcat\n");
-	unsigned int ex5nb = 3;
-	char ex5dest[] = "abc";
-	char ex5src[] = "defghijklmn";
-	printf("Expected:\t%s\n", strlcat(ex5dest, ex5src, ex5nb));
-	// printf("Result:\t\t%s\n", ft_strstr(ex4str, ex4to_find));
+	unsigned int ex5size = 16;
+	char ex5dest[] = "abcd"; // this function cat dest to src
+	char ex5src[] = "efgh";
+	printf("Expected:\t%u\n", strlcat(ex5dest, ex5src, ex5size)); // NOT WORK ON Windows!!
+	printf("Result:\t%u\n", ft_strlcat(ex5dest, ex5src, ex5size)); // NOT WORK ON Windows!!
 	return (0);
 }
