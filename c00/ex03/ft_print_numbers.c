@@ -9,7 +9,6 @@
 /*   Updated: 2023/01/12 19:59:25 by nsuphasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
 
 void	ft_print_numbers(void)
@@ -23,3 +22,9 @@ void	ft_print_numbers(void)
 		number++;
 	}
 }
+/*
+int	main(void)
+{
+	ft_print_numbers();
+}
+*/

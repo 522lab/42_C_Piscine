@@ -22,25 +22,16 @@ char	*ft_strcpy(char *dest, char *src)
 	dest[i] = '\0';
 	return (dest);
 }
-// int     main(void)
-// {
-//     // Imposter concept...
-//     // I have null terminator.
-//     // I don't care buffer, I care src.
-//     int buffer = 15;
-//     // real
-//     char src1[] = "abcdefgh";
-//     char dest1[buffer];
-//     printf("---strcpy (real)---\n");
-//     strcpy(dest1, src1);
-//     printf("string: %s\n", dest1);
-//     printf("size: %ld\n", sizeof(dest1));
-//     // imposter
-//     char src2[] = "abcdefgh";
-//     char dest2[buffer];
-//     printf("\n---ft_strcpy (imposter)---\n");
-//     ft_strcpy(dest2, src2);
-//     printf("string: %s\n", dest2);
-//     printf("size: %ld\n", sizeof(dest2));
-//     return 0;
-// }
+int     main(void)
+{
+    // copy all source
+    // buffer size unchanged
+    int buffer = 15;
+    char src[] = "abcdefgh";
+    char dest1[buffer];
+    char dest2[buffer];
+    printf("real string: %s\n", strcpy(dest1, src));
+    printf("fake string: %s\n", ft_strcpy(dest2, src));
+    printf("size: %d\n", sizeof(dest2));
+    return 0;
+}

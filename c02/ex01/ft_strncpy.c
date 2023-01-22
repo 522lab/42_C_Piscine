@@ -29,25 +29,18 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	}
 	return (dest);
 }
-// int     main(void)
-// {
-//     // Imposter concept...
-//     // I have null terminator.
-//     // I care buffer and I care src.
-//     unsigned int buffer = 15;
-//     // real
-//     char src1[] = "abcdefgh";
-//     char dest1[buffer];
-//     printf("---strncpy (real)---\n");
-//     strncpy(dest1, src1, buffer);
-//     printf("string: %s\n", dest1);
-//     printf("size: %ld\n", sizeof(dest1));
-//     // imposter
-//     char src2[] = "abcdefgh";
-//     char dest2[buffer];
-//     printf("\n---ft_strncpy (imposter)---\n");
-//     ft_strncpy(dest2, src2, buffer);
-//     printf("string: %s\n", dest2);
-//     printf("size: %ld\n", sizeof(dest2));
-//     return 0;
-// }
+int     main(void)
+{
+    // copy all source OR buffer
+    // buffer size unchanged
+    // buffer too small ==> overflow
+    unsigned int buffer = 4;
+    char src[] = "abcdefgh";
+    char dest1[buffer];
+    char dest2[buffer];
+    strncpy(dest1, src, buffer);
+    printf("real string: %s\n", dest1);
+    ft_strncpy(dest2, src, buffer);
+    printf("fake string: %s\n", dest2);
+    return 0;
+}

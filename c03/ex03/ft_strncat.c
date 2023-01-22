@@ -31,4 +31,5 @@ int main(){
 	printf("%s\n", strncat(dest1,src, 2));
 	printf("%s\n", ft_strncat(dest2,src, 2));
 	return 0;
-}*/
+}
+*/

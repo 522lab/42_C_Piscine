@@ -24,4 +24,5 @@ int main()
 	printf("strncmp : %d\n",a);
 	printf("ft_strncmp : %d\n",b);
 	return 0;
-}*/
+}
+*/

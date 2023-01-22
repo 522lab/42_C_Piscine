@@ -9,6 +9,7 @@
 /*   Updated: 2023/01/18 13:03:15 by nsuphasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
 
 void	ft_rev_int_tab(int *tab, int size)
 {
@@ -25,3 +26,14 @@ void	ft_rev_int_tab(int *tab, int size)
 		size--;
 	}
 }
+/*
+int	main(void)
+{
+	int a[3] = {2, 2, 5};
+	ft_rev_int_tab(a, 3);
+	for (int i = 0; i < 3; i++)
+	{
+		printf("%d", a[i]);
+	}
+}
+*/

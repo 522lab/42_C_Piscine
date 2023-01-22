@@ -9,7 +9,6 @@
 /*   Updated: 2023/01/12 19:51:15 by nsuphasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
 
 void	ft_print_reverse_alphabet(void)
@@ -23,3 +22,9 @@ void	ft_print_reverse_alphabet(void)
 		letter--;
 	}
 }
+/*
+int	main(void)
+{
+	ft_print_reverse_alphabet();
+}
+*/

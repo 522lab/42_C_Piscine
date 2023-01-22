@@ -9,7 +9,6 @@
 /*   Updated: 2023/01/13 22:30:08 by nsuphasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
 
 void	ft_print_comb(void)
@@ -40,3 +39,9 @@ void	ft_print_comb(void)
 		i++;
 	}
 }
+/*
+int	main(void)
+{
+	ft_print_comb();
+}
+*/

@@ -9,7 +9,6 @@
 /*   Updated: 2023/01/12 20:27:29 by nsuphasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
 
 void	ft_is_negative(int n)
@@ -19,3 +18,9 @@ void	ft_is_negative(int n)
 	else
 		write(1, "P", 1);
 }
+/*
+int	main(void)
+{
+	ft_is_negative(-1);
+}
+*/

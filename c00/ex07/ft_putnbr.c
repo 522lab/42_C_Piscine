@@ -9,7 +9,6 @@
 /*   Updated: 2023/01/15 21:23:29 by nsuphasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
 
 void	ft_putnbr(int nb)
@@ -20,12 +19,12 @@ void	ft_putnbr(int nb)
 	{
 		write(1, "-2147483648", 11);
 	}
-	else if (nb < 0)
+	if (nb < 0)
 	{
 		write(1, "-", 1);
-		ft_putnbr(-nb);
+		nb = -nb;
 	}
-	else if (nb > 9)
+	if (nb > 9)
 	{
 		ft_putnbr(nb / 10);
 		ft_putnbr(nb % 10);
@@ -36,3 +35,9 @@ void	ft_putnbr(int nb)
 		write(1, &a, 1);
 	}
 }
+/*
+int	main(void)
+{
+	ft_putnbr(-522);
+}
+*/

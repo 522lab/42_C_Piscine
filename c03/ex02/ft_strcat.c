@@ -29,4 +29,5 @@ int main(){
 	printf("--------------ft_strcat-------------\n");
 	printf("%s\n", ft_strcat(dest,src));
 	return 0;
-}*/
+}
+*/
