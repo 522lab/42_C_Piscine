@@ -1,28 +1,32 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: nsuphasa <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/20 19:02:44 by nsuphasa          #+#    #+#             */
-/*   Updated: 2023/01/20 19:32:41 by nsuphasa         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 char	*ft_strcat(char *dest, char *src)
 {
 	int	i;
 	int	j;
 
-	i = -1;
-	while (dest[++i])
-	j = -1;
-	while (src[++j])
+	i = 0;
+	j = 0;
+	while (dest[i])
+	{
+		i++;
+	}
+	while (src[j])
 	{
 		dest[i] = src[j];
 		i++;
+		j++;
 	}
 	dest[i] = '\0';
 	return (dest);
 }
+/*
+#include<stdio.h>
+#include<string.h>
+int main(){
+
+	char dest[] = "hi, ";
+	char src[] = "mom";
+	//strcat not work (hardware instruction)
+	printf("--------------ft_strcat-------------\n");
+	printf("%s\n", ft_strcat(dest,src));
+	return 0;
+}*/
