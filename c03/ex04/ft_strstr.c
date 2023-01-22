@@ -2,6 +2,8 @@ char	*ft_strstr(char *str, char *to_find)
 {
 	int	i;
 	int	j;
+	int	i;
+	int	j;
 
 	if (to_find[0] == '\0')
 		return (str);
@@ -24,5 +26,6 @@ char	*ft_strstr(char *str, char *to_find)
 		}
 		i++;
 	}
+	return (0);
 	return (0);
 }
