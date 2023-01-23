@@ -43,8 +43,8 @@ char	*ft_strstr(char *str, char *to_find)
 #include <string.h>
 int	main(void)
 {
-	char str[] = "abcdefgh";
-	char to_find[] = "ef";
+	char str[] = 		"this is the way";
+	char to_find[] = 	"is";
 	printf("%s\n", strstr(str, to_find));
 	printf("%s\n", ft_strstr(str, to_find));
 	return (0);
