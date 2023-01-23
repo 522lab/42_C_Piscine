@@ -29,9 +29,10 @@ int	ft_is_prime(int nb)
 #include <stdio.h>
 int	main(void)
 {
-	printf("sqrt 16 = %d\n", ft_is_prime(16)); // perfect square
-	printf("sqrt -16 = %d\n", ft_is_prime(-16)); // negative
-	printf("sqrt 522 = %d\n", ft_is_prime(522)); // non-perfect square
+	printf("Prime is 1, Non-prime is 0\n");
+	printf("17 is = %d\n", ft_is_prime(17)); // prime
+	printf("0 = %d\n", ft_is_prime(0)); // zero is not prime
+	printf("1 = %d\n", ft_is_prime(1)); // one is not prime
 	return (0);
 }
 */
