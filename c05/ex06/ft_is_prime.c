@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsuphasa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/23 21:56:10 by nsuphasa          #+#    #+#             */
-/*   Updated: 2023/01/23 21:56:12 by nsuphasa         ###   ########.fr       */
+/*   Created: 2023/01/24 00:08:56 by nsuphasa          #+#    #+#             */
+/*   Updated: 2023/01/24 00:08:57 by nsuphasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_recursive_factorial(int nb)
+int	ft_is_prime(int nb)
 {
-	if (nb < 0)
-	{
+	int	i;
+
+	if (nb == 0 || nb == 1)
 		return (0);
+	i = 2;
+	while (i <= nb / 2)
+	{
+		if (nb % i == 0)
+			break ;
 	}
-	if (nb == 0)
-		return (1);
-	else
-		return (nb * ft_recursive_factorial(nb - 1));
+	i++;
+	return (0);
 }
 /*
 #include <stdio.h>
 int	main(void)
 {
-	printf("4! = %d\n", ft_recursive_factorial(4));
-	printf("0! = %d\n", ft_recursive_factorial(0));
-	printf("-1! = %d\n", ft_recursive_factorial(-1));
+	printf("sqrt 16 = %d\n", ft_is_prime(16)); // perfect square
+	printf("sqrt -16 = %d\n", ft_is_prime(-16)); // negative
+	printf("sqrt 522 = %d\n", ft_is_prime(522)); // non-perfect square
 	return (0);
 }
 */

@@ -1,33 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsuphasa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/23 21:56:10 by nsuphasa          #+#    #+#             */
-/*   Updated: 2023/01/23 21:56:12 by nsuphasa         ###   ########.fr       */
+/*   Created: 2023/01/24 00:08:56 by nsuphasa          #+#    #+#             */
+/*   Updated: 2023/01/24 00:08:57 by nsuphasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_recursive_factorial(int nb)
+int	ft_sqrt(int nb)
 {
+	int	approx;
+	int	last;
+	int	diff;
+
+	approx = 1;
+	last = 0;
 	if (nb < 0)
-	{
 		return (0);
+	while (1)
+	{
+		last = approx;
+		approx = (approx + nb / approx) / 2;
+		diff = approx - last;
+		if (diff < 0)
+			diff = -diff;
+		if (diff == 0)
+			break ;
 	}
-	if (nb == 0)
-		return (1);
+	if (approx * approx == nb)
+		return (approx);
 	else
-		return (nb * ft_recursive_factorial(nb - 1));
+		return (0);
 }
 /*
 #include <stdio.h>
 int	main(void)
 {
-	printf("4! = %d\n", ft_recursive_factorial(4));
-	printf("0! = %d\n", ft_recursive_factorial(0));
-	printf("-1! = %d\n", ft_recursive_factorial(-1));
+	printf("sqrt 16 = %d\n", ft_sqrt(16)); // perfect square
+	printf("sqrt -16 = %d\n", ft_sqrt(-16)); // negative
+	printf("sqrt 522 = %d\n", ft_sqrt(522)); // non-perfect square
 	return (0);
 }
 */
