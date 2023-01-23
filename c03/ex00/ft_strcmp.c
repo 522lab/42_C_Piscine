@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nsuphasa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/23 14:02:46 by nsuphasa          #+#    #+#             */
+/*   Updated: 2023/01/23 14:03:05 by nsuphasa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 int	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
@@ -14,8 +26,8 @@ int	ft_strcmp(char *s1, char *s2)
 /*
 #include<stdio.h>
 #include<string.h>
-int main(){
-
+int main(void)
+{
     char s1[] = "test" ;
     char s2[] = "test";
     int a = ft_strcmp(s1,s2);

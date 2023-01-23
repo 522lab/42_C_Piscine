@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nsuphasa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/23 14:03:58 by nsuphasa          #+#    #+#             */
+/*   Updated: 2023/01/23 14:03:59 by nsuphasa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 char	*ft_strcat(char *dest, char *src)
 {
 	int	i;
@@ -21,12 +33,10 @@ char	*ft_strcat(char *dest, char *src)
 /*
 #include<stdio.h>
 #include<string.h>
-int main(){
-
-	char dest[] = "hi, ";
-	char src[] = "mom";
-	//strcat not work (hardware instruction)
-	printf("--------------ft_strcat-------------\n");
+int main(void)
+{
+	char dest[] = "abcd";
+	char src[] = "efgh";
 	printf("%s\n", ft_strcat(dest,src));
 	return 0;
 }

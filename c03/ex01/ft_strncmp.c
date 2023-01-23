@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nsuphasa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/23 14:03:19 by nsuphasa          #+#    #+#             */
+/*   Updated: 2023/01/23 14:03:21 by nsuphasa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int	i;
@@ -14,8 +26,7 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 /*
 #include<stdio.h>
 #include<string.h>
-
-int main()
+int main(void)
 {
 	char s1[] = "strIng";
 	char s2[] = "string";

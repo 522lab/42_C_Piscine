@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nsuphasa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/23 14:15:24 by nsuphasa          #+#    #+#             */
+/*   Updated: 2023/01/23 14:15:33 by nsuphasa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 unsigned int	ft_strlen(char *str)
 {
 	unsigned int	i;
@@ -33,3 +45,15 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	else
 		return (len_d + len_s);
 }
+/*
+#include <stdio.h>
+#include <string.h>
+int	main(void)
+{
+	unsigned int size  = 7;
+	char dest[] = "abcd";
+	char src[] = "efgh";
+	printf("%u\n", ft_strlcat(dest, src, size));
+	printf("%s\n", dest);
+}
+*/
