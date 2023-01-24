@@ -9,7 +9,6 @@
 /*   Updated: 2023/01/19 21:25:42 by nsuphasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
 char	*ft_strupcase(char *str)
 {
@@ -25,10 +24,13 @@ char	*ft_strupcase(char *str)
 	}
 	return (str);
 }
-//int     main(void)
-//{
-//    char str[] = "Abc12Def45#Ucs%$fgH";
-//    printf("%s\n", ft_strupcase(str));
-//
-//    return 0;
-//}
+/*
+#include <stdio.h>
+int     main(void)
+{
+   char str[] = "Abc12Def45#Ucs%$fgH";
+   printf("%s\n", ft_strupcase(str));
+
+   return 0;
+}
+*/

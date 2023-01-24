@@ -9,8 +9,6 @@
 /*   Updated: 2023/01/19 19:34:21 by nsuphasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
 
 int	ft_str_is_alpha(char *str)
 {
@@ -27,13 +25,17 @@ int	ft_str_is_alpha(char *str)
 	}
 	return (1);
 }
-// int     main(void)
-// {
-//     printf("%d\n", ft_str_is_alpha("1234"));
-//     printf("%d\n", ft_str_is_alpha("a12d"));
-//     printf("%d\n", ft_str_is_alpha("abc1"));
-//     printf("%d\n", ft_str_is_alpha(""));
-//     printf("%d\n", ft_str_is_alpha("AbcD"));
-//     printf("%d\n", ft_str_is_alpha("abcd"));
-//     return 0;
-// }
+/*
+#include <stdio.h>
+#include <string.h>
+int     main(void)
+{
+    printf("%d\n", ft_str_is_alpha("1234"));
+    printf("%d\n", ft_str_is_alpha("a12d"));
+    printf("%d\n", ft_str_is_alpha("abc1"));
+    printf("%d\n", ft_str_is_alpha(""));
+    printf("%d\n", ft_str_is_alpha("AbcD"));
+    printf("%d\n", ft_str_is_alpha("abcd"));
+    return 0;
+}
+*/

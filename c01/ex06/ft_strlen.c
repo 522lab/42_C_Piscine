@@ -9,7 +9,6 @@
 /*   Updated: 2023/01/17 21:58:38 by nsuphasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
 int	ft_strlen(char *str)
 {
@@ -23,6 +22,7 @@ int	ft_strlen(char *str)
 	return (i);
 }
 /*
+#include <stdio.h>
 int	main(void)
 {
 	printf("%d", ft_strlen("Who.."));

@@ -9,13 +9,13 @@
 /*   Updated: 2023/01/16 23:09:19 by nsuphasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
 void	ft_ultimate_ft(int *********nbr)
 {
 	*********nbr = 42;
 }
 /*
+#include <stdio.h>
 int	main(void)
 {
 	int number = 522;

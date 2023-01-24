@@ -9,7 +9,6 @@
 /*   Updated: 2023/01/18 12:59:10 by nsuphasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
 void	ft_sort_int_tab(int *tab, int size)
 {
@@ -35,6 +34,7 @@ void	ft_sort_int_tab(int *tab, int size)
 	}
 }
 /*
+#include <stdio.h>
 int	main(void)
 {
 	int a[3] = {22, 5};

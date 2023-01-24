@@ -9,7 +9,6 @@
 /*   Updated: 2023/01/19 20:20:34 by nsuphasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
 int	ft_str_is_printable(char *str)
 {
@@ -25,13 +24,16 @@ int	ft_str_is_printable(char *str)
 	}
 	return (1);
 }
-// int     main(void)
-// {
-//     printf("%d\n", ft_str_is_printable("\t"));
-//     printf("%d\n", ft_str_is_printable("\n"));
-//     printf("%d\n", ft_str_is_printable("\v"));
-//     printf("%d\n", ft_str_is_printable(""));
-//     printf("%d\n", ft_str_is_printable("&*#%^&@#%Y*(#"));
-//     printf("%d\n", ft_str_is_printable("abcd1234"));
-//     return 0;
-// }
+/*
+#include <stdio.h>
+int     main(void)
+{
+    printf("%d\n", ft_str_is_printable("\t"));
+    printf("%d\n", ft_str_is_printable("\n"));
+    printf("%d\n", ft_str_is_printable("\v"));
+    printf("%d\n", ft_str_is_printable(""));
+    printf("%d\n", ft_str_is_printable("&*#%^&@#%Y*(#"));
+    printf("%d\n", ft_str_is_printable("abcd1234"));
+    return 0;
+}
+*/

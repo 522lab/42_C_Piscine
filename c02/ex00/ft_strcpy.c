@@ -9,8 +9,6 @@
 /*   Updated: 2023/01/19 18:53:48 by nsuphasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
 
 char	*ft_strcpy(char *dest, char *src)
 {
@@ -22,6 +20,9 @@ char	*ft_strcpy(char *dest, char *src)
 	dest[i] = '\0';
 	return (dest);
 }
+/*
+#include <stdio.h>
+#include <string.h>
 int     main(void)
 {
     // copy all source
@@ -35,3 +36,4 @@ int     main(void)
     printf("size: %d\n", sizeof(dest2));
     return 0;
 }
+*/

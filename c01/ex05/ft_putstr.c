@@ -9,7 +9,6 @@
 /*   Updated: 2023/01/18 13:02:25 by nsuphasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 
 void	ft_putstr(char *str)
 {
@@ -23,6 +22,7 @@ void	ft_putstr(char *str)
 	}
 }
 /*
+#include <unistd.h>
 int	main(void)
 {
 	ft_putstr("522 > 42");

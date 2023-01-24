@@ -9,7 +9,6 @@
 /*   Updated: 2023/01/18 13:03:15 by nsuphasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
 void	ft_rev_int_tab(int *tab, int size)
 {
@@ -27,6 +26,7 @@ void	ft_rev_int_tab(int *tab, int size)
 	}
 }
 /*
+#include <stdio.h>
 int	main(void)
 {
 	int a[3] = {2, 2, 5};

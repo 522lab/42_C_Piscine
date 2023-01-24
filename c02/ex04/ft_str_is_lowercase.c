@@ -9,8 +9,6 @@
 /*   Updated: 2023/01/19 20:08:18 by nsuphasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
 
 int	ft_str_is_lowercase(char *str)
 {
@@ -26,13 +24,17 @@ int	ft_str_is_lowercase(char *str)
 	}
 	return (1);
 }
-// int     main(void)
-// {
-//     printf("%d\n", ft_str_is_lowercase("ABCD"));
-//     printf("%d\n", ft_str_is_lowercase("aBCd"));
-//     printf("%d\n", ft_str_is_lowercase("abcD"));
-//     printf("%d\n", ft_str_is_lowercase(""));
-//     printf("%d\n", ft_str_is_lowercase("abcd"));
-//     printf("%d\n", ft_str_is_lowercase("abcdefgh"));
-//     return 0;
-// }
+/*
+#include <stdio.h>
+#include <string.h>
+int     main(void)
+{
+    printf("%d\n", ft_str_is_lowercase("ABCD"));
+    printf("%d\n", ft_str_is_lowercase("aBCd"));
+    printf("%d\n", ft_str_is_lowercase("abcD"));
+    printf("%d\n", ft_str_is_lowercase(""));
+    printf("%d\n", ft_str_is_lowercase("abcd"));
+    printf("%d\n", ft_str_is_lowercase("abcdefgh"));
+    return 0;
+}
+*/

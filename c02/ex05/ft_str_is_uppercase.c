@@ -9,8 +9,6 @@
 /*   Updated: 2023/01/19 20:12:32 by nsuphasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
 
 int	ft_str_is_uppercase(char *str)
 {
@@ -26,6 +24,9 @@ int	ft_str_is_uppercase(char *str)
 	}
 	return (1);
 }
+/*
+#include <stdio.h>
+#include <string.h>
 // int     main(void)
 // {
 //     printf("%d\n", ft_str_is_uppercase("abcd"));
@@ -36,3 +37,4 @@ int	ft_str_is_uppercase(char *str)
 //     printf("%d\n", ft_str_is_uppercase("ABCDEFGH"));
 //     return 0;
 // }
+*/

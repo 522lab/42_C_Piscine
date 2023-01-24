@@ -9,7 +9,6 @@
 /*   Updated: 2023/01/17 00:03:15 by nsuphasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
 void	ft_div_mod(int a, int b, int *div, int *mod)
 {
@@ -17,6 +16,7 @@ void	ft_div_mod(int a, int b, int *div, int *mod)
 	*mod = a % b;
 }
 /*
+#include <stdio.h>
 int	main(void)
 {
 	int a = 522;

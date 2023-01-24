@@ -9,8 +9,6 @@
 /*   Updated: 2023/01/19 20:48:30 by nsuphasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
@@ -29,6 +27,9 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	}
 	return (dest);
 }
+/*
+#include <stdio.h>
+#include <string.h>
 int     main(void)
 {
     // copy all source OR buffer
@@ -44,3 +45,4 @@ int     main(void)
     printf("fake string: %s\n", dest2);
     return 0;
 }
+*/

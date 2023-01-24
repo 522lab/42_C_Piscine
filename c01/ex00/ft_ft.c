@@ -9,13 +9,13 @@
 /*   Updated: 2023/01/16 23:02:29 by nsuphasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
 void	ft_ft(int *nbr)
 {
 	*nbr = 42;
 }
 /*
+#include <stdio.h>
 int	main(void)
 {
 	int nbr = 522;

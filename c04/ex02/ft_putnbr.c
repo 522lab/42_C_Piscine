@@ -37,10 +37,10 @@ void	ft_putnbr(int nb)
 		write(1, &a, 1);
 	}
 }
-
+/*
 int main(void)
 {
     ft_putnbr(-2147483648);
     return 0;
 }
-
+*/

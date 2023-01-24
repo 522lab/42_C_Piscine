@@ -9,8 +9,6 @@
 /*   Updated: 2023/01/19 19:37:48 by nsuphasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
 
 int	ft_str_is_numeric(char *str)
 {
@@ -26,13 +24,17 @@ int	ft_str_is_numeric(char *str)
 	}
 	return (1);
 }
-// int     main(void)
-// {
-//     printf("%d\n", ft_str_is_numeric("abcd"));
-//     printf("%d\n", ft_str_is_numeric("1ab2"));
-//     printf("%d\n", ft_str_is_numeric("123a"));
-//     printf("%d\n", ft_str_is_numeric(""));
-//     printf("%d\n", ft_str_is_numeric("1234"));
-//     printf("%d\n", ft_str_is_numeric("1234567890"));
-//     return 0;
-// }
+/*
+#include <stdio.h>
+#include <string.h>
+int     main(void)
+{
+    printf("%d\n", ft_str_is_numeric("abcd"));
+    printf("%d\n", ft_str_is_numeric("1ab2"));
+    printf("%d\n", ft_str_is_numeric("123a"));
+    printf("%d\n", ft_str_is_numeric(""));
+    printf("%d\n", ft_str_is_numeric("1234"));
+    printf("%d\n", ft_str_is_numeric("1234567890"));
+    return 0;
+}
+*/

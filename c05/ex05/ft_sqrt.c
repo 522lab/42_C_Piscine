@@ -41,7 +41,7 @@ int	main(void)
 {
 	printf("sqrt 16 = %d\n", ft_sqrt(16)); // perfect square
 	printf("sqrt -16 = %d\n", ft_sqrt(-16)); // negative
-	printf("sqrt 522 = %d\n", ft_sqrt(522)); // non-perfect square
+	printf("sqrt 17 = %d\n", ft_sqrt(17)); // non-perfect square
 	return (0);
 }
 */

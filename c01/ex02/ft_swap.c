@@ -9,7 +9,6 @@
 /*   Updated: 2023/01/17 17:16:50 by nsuphasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
 void	ft_swap(int *a, int *b)
 {
@@ -20,6 +19,7 @@ void	ft_swap(int *a, int *b)
 	*b = tmp;
 }
 /*
+#include <stdio.h>
 int	main(void)
 {
 	int a = 42;
