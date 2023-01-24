@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsuphasa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/24 00:08:56 by nsuphasa          #+#    #+#             */
-/*   Updated: 2023/01/24 00:08:57 by nsuphasa         ###   ########.fr       */
+/*   Created: 2023/01/25 00:35:21 by nsuphasa          #+#    #+#             */
+/*   Updated: 2023/01/25 00:35:23 by nsuphasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,27 @@ int	ft_is_prime(int nb)
 	}
 	return (1);
 }
+
+int	ft_find_next_prime(int n)
+{
+	while (1)
+	{
+		if (ft_is_prime(n))
+		{
+			return (n);
+		}
+	n++;
+	}
+}
 /*
 #include <stdio.h>
 int	main(void)
 {
-	printf("Prime is 1, Non-prime is 0\n");
-	// prime
-	printf("17 is = %d\n", ft_is_prime(17));
-	// zero is not prime
-	printf("0 = %d\n", ft_is_prime(0));
-	// one is not prime
-	printf("1 = %d\n", ft_is_prime(1));
-	// max prime number for int
-	printf("2147483647 = %d\n", ft_is_prime(2147483647));
+	// start from zero
+	printf("next prime of 0 = %d\n", ft_find_next_prime(0));
+	printf("next prime of 17 = %d\n", ft_find_next_prime(17));
+	// max prime for int
+	printf("next prime of 2147483647 = %d\n", ft_find_next_prime(2147483647));
 	return (0);
 }
 */
