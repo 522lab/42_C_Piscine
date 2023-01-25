@@ -24,7 +24,7 @@ int	ft_recursive_power(int nb, int power)
 	else
 		return (1);
 }
-/*
+
 #include <stdio.h>
 int	main(void)
 {
@@ -33,4 +33,3 @@ int	main(void)
 	printf("2^3 = %d\n", ft_recursive_power(2, 3));
 	return (0);
 }
-*/
