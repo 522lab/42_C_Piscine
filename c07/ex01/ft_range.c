@@ -26,11 +26,11 @@ int	*ft_range(int min, int max)
 /*
 int	main(void)
 {
-	int min = 0;
-	int max = 0;
+	int min = -4;
+	int max = 2;
+	int	*range = ft_range(min, max);
 	int	size = max - min + 1;
 	printf("SIZE: %d\n", size);
-	int	*range = ft_range(min, max);
 	printf("RANGE: ");
 	for (int i = 0; i < size; i++)
 	{
