@@ -14,7 +14,7 @@ int	ft_is_prime(int nb)
 {
 	int	i;
 
-	if (nb == 0 || nb == 1)
+	if (nb <= 0 || nb == 1)
 		return (0);
 	i = 2;
 	while (i <= nb / 2)
@@ -26,26 +26,37 @@ int	ft_is_prime(int nb)
 	return (1);
 }
 
-int	ft_find_next_prime(int n)
+int	ft_find_next_prime(int nb)
 {
-	while (1)
+	int	i;
+
+	if (nb == 2147483647)
+		return (2147483647);
+	if (nb < 2)
+		return (2);
+	i = nb;
+	while (1 && i < 2147483647)
 	{
-		if (ft_is_prime(n))
-		{
-			return (n);
-		}
-	n++;
+		if (i == nb)
+			i++;
+		if (ft_is_prime(i))
+			return (i);
+		i++;
 	}
+	return (0);
 }
-/*
+/* 
 #include <stdio.h>
 int	main(void)
 {
 	// start from zero
 	printf("next prime of 0 = %d\n", ft_find_next_prime(0));
+	// prime
 	printf("next prime of 17 = %d\n", ft_find_next_prime(17));
+	// negative
+	printf("next prime of -17 = %d\n", ft_find_next_prime(-17));
 	// max prime for int
 	printf("next prime of 2147483647 = %d\n", ft_find_next_prime(2147483647));
 	return (0);
 }
-*/
+ */

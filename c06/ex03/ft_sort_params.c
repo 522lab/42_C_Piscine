@@ -12,6 +12,20 @@
 
 #include <unistd.h>
 
+int	ft_strcmp(char *s1, char *s2)
+{
+	int	i;
+
+	i = 0;
+	while (s1[i] || s2[i])
+	{
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
+	}
+	return (0);
+}
+
 void	ft_sort_params(char **av, int ac)
 {
 	int		i;
@@ -24,7 +38,7 @@ void	ft_sort_params(char **av, int ac)
 		j = i + 1;
 		while (j < ac)
 		{
-			if (av[i][0] > av[j][0])
+			if (ft_strcmp(av[i], av[j]) > 0)
 			{
 				tmp = av[i];
 				av[i] = av[j];
@@ -57,10 +71,6 @@ void	ft_print_params(char **av, int ac)
 
 int	main(int ac, char **av)
 {
-	if (ac == 0)
-	{
-		return (0);
-	}
 	ft_sort_params(av, ac);
 	ft_print_params(av, ac);
 	return (0);

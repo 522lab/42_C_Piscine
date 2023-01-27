@@ -18,7 +18,7 @@ int	ft_sqrt(int nb)
 
 	approx = 1;
 	last = 0;
-	if (nb < 0)
+	if (nb <= 0)
 		return (0);
 	while (1)
 	{
@@ -35,7 +35,7 @@ int	ft_sqrt(int nb)
 	else
 		return (0);
 }
-/*
+/* 
 #include <stdio.h>
 int	main(void)
 {
@@ -44,4 +44,4 @@ int	main(void)
 	printf("sqrt 17 = %d\n", ft_sqrt(17)); // non-perfect square
 	return (0);
 }
-*/
+ */
