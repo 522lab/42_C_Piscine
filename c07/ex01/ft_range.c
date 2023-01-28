@@ -13,29 +13,27 @@ int	*ft_range(int min, int max)
 	range = malloc(sizeof(int) * (size));
 	if (!range)
 		return (NULL);
-	i = 0;
-	while (min <= max)
-	{
-		range[i] = min;
-		i++;
-		min++;
-	}
+	i = -1;
+	while (++i < size)
+		range[i] = min + i;
 	range[i] = '\0';
 	return (range);
 }
 /*
 int	main(void)
 {
-	int min = -4;
-	int max = 2;
+	int min = -2;
+	int max = 4;
 	int	*range = ft_range(min, max);
-	int	size = max - min + 1;
-	printf("SIZE: %d\n", size);
 	printf("RANGE: ");
-	for (int i = 0; i < size; i++)
+    int i;
+	for (i = 0; i < max - min + 1; i++)
 	{
 		printf("%d ", range[i]);
 	}
 	printf("\n");
+	printf("SIZE: %d\n", i);
+    free(range);
+    return (0);
 }
  */
