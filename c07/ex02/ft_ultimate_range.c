@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nsuphasa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/28 16:39:05 by nsuphasa          #+#    #+#             */
+/*   Updated: 2023/01/28 16:39:08 by nsuphasa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -6,13 +18,13 @@ int	ft_ultimate_range(int **range, int min, int max)
 	int	size;
 	int	i;
 
+	size = max - min;
+	*range = malloc(sizeof(int) * size);
 	if (min >= max)
 	{
 		*range = NULL;
 		return (0);
 	}
-	size = max - min + 1;
-	*range = malloc(sizeof(int) * size);
 	if (!*range)
 		return (-1);
 	i = -1;
@@ -20,11 +32,10 @@ int	ft_ultimate_range(int **range, int min, int max)
 		(*range)[i] = min + i;
 	return (size);
 }
-
 /* int main(void)
 {
-    int min = -2;
-    int max = 4;
+    int min = 0;
+    int max = 0;
     int *range;
     int size = ft_ultimate_range(&range, min, max);
     printf("RANGE: ");
@@ -37,5 +48,24 @@ int	ft_ultimate_range(int **range, int min, int max)
     printf("SIZE: %d\n", size);
     free(range);
     return 0;
-}
- */
+} */
+
+/* int	ft_ultimate_range(int **range, int min, int max)
+{
+	int	size;
+	int	i;
+
+	size = max - min + 1;
+	*range = malloc(sizeof(int) * size);
+	if (min >= max)
+	{
+		*range = NULL;
+		return (0);
+	}
+	if (!*range)
+		return (-1);
+	i = -1;
+	while (++i < size)
+		(*range)[i] = min + i;
+	return (size);
+} */
