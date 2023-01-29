@@ -1,5 +1,17 @@
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nsuphasa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/29 18:42:47 by nsuphasa          #+#    #+#             */
+/*   Updated: 2023/01/29 18:42:49 by nsuphasa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 int	ft_strlen(char *str)
@@ -7,94 +19,72 @@ int	ft_strlen(char *str)
 	int	i;
 
 	i = 0;
-	while (str[i])
+	while (str[i] != '\0')
+	{
 		i++;
+	}
 	return (i);
 }
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
 	int	i;
+	int	j;
 
 	i = 0;
-	while (src[i])
+	j = 0;
+	while (dest[i])
 	{
-		dest[i] = src[i];
 		i++;
+	}
+	while (src[j])
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
 	dest[i] = '\0';
 	return (dest);
 }
 
-int	ft_all_len(char **strings, int size, int sep_len)
-{
-	int	all_len;
-	int	i;
-
-	all_len = 0;
-	i = 0;
-	while (i < size)
-	{
-		all_len += ft_strlen(strings[i]);
-		all_len += sep_len;
-		i++;
-	}
-	all_len -= sep_len;
-	return (all_len);
-}
-
 char	*ft_strjoin(int size, char **strs, char *sep)
 {
-	int		all_len;
+	char	*result;
 	int		i;
-	char	*res;
-	char	*pos;
+	int		total_length;
 
 	if (size == 0)
-		return ((char *)malloc(sizeof(char)));
-	all_len = ft_all_len(strs, size, ft_strlen(sep));
-	res = (char *)malloc((all_len + 1) * sizeof(char));
-	pos = res;
-	if (!pos)
-		return (0);
+	{
+		result = malloc(sizeof(char));
+		*result = '\0';
+		return (result);
+	}
+	total_length = 0;
+	i = -1;
+	while (++i < size)
+		total_length += ft_strlen(strs[i]);
+	total_length += ft_strlen(sep) * (size - 1);
+	result = malloc(total_length + 1);
 	i = -1;
 	while (++i < size)
 	{
-		ft_strcpy(pos, strs[i]);
-		pos += ft_strlen(strs[i]);
+		ft_strcat(result, strs[i]);
 		if (i < size - 1)
-		{
-			ft_strcpy(pos, sep);
-			pos += ft_strlen(sep);
-		}
+			ft_strcat(result, sep);
 	}
-	*pos = '\0';
-	return (res);
+	result[total_length] = '\0';
+	return (result);
 }
-
-int main(void)
+/* 
+int main()
 {
-	int i;
-	char **strs;
-	char *sep;
-	char *res;
-	int size = 3;
-
-	strs = (char **)malloc(size * sizeof(char *));
-	for (i = 0; i < size; i++)
-	{
-		strs[i] = (char *)malloc(sizeof(char) * 1);
-	}
-	strcpy(strs[0], "522");
-	strcpy(strs[1], ">");
-	strcpy(strs[2], "42");
-	sep = " ";
-	res = ft_strjoin(size, strs, sep);
-	printf("%s\n", res);
-	for (int i = 0; i < size; i++)
-	{
-		free(strs[i]);
-	}
-	free(strs);
-	free(res);
+	char s1[] = "Hello";
+	char s2[] = "World";
+	char s3[] = "I";
+	char s4[] = "am";
+	char s5[] = "chatGPT";
+	char s6[] = ",";
+	char *strs[] = {s1, s2, s3, s4, s5};
+	printf("%s\n", ft_strjoin(5, strs, s6));
 }
+ */
