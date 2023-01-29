@@ -71,7 +71,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	*pos = '\0';
 	return (res);
 }
-/* 
+
 int main(void)
 {
 	int i;
@@ -81,9 +81,10 @@ int main(void)
 	int size = 3;
 
 	strs = (char **)malloc(size * sizeof(char *));
-	strs[0] = (char *)malloc(sizeof(char) * (3 + 1));
-	strs[1] = (char *)malloc(sizeof(char) * (1 + 1));
-	strs[2] = (char *)malloc(sizeof(char) * (2 + 1));
+	for (i = 0; i < size; i++)
+	{
+		strs[i] = (char *)malloc(sizeof(char) * 1);
+	}
 	strcpy(strs[0], "522");
 	strcpy(strs[1], ">");
 	strcpy(strs[2], "42");
@@ -97,4 +98,3 @@ int main(void)
 	free(strs);
 	free(res);
 }
- */
